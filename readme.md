@@ -69,7 +69,7 @@ Initially managed via DMs and WhatsApp, this design helps scale operations by st
 
 ## 📷 ER Diagram
 
-> Add your image or diagram link here  
+> ![Alt text](InstagramThriftStore.png)
 
 
 
@@ -130,4 +130,4 @@ This system models a clinic where:
 
 ## 📷 ER Diagram
 
-> Add your image or diagram link here  
+> ![Alt text](ClinicManagementSystem.png) 
