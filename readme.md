@@ -1,9 +1,10 @@
 # 📊 Database Design Projects
 
-This repository contains ER diagram designs for two real-world systems:
+This repository contains ER diagram designs for three real-world systems:
 
 1. 🛍️ Instagram Thrift Store Management System  
 2. 🏥 Clinic Management System  
+3. 🚗 Comic-Con Parking Management System  
 
 These designs focus on **real-world scalability, normalization, and practical use cases**.
 
@@ -69,10 +70,7 @@ Initially managed via DMs and WhatsApp, this design helps scale operations by st
 
 ## 📷 ER Diagram
 
-> ![Alt text](InstagramThriftStore.png)
-
-
-
+![Instagram Thrift Store ER Diagram](InstagramThriftStore.png)
 
 ---
 
@@ -130,4 +128,65 @@ This system models a clinic where:
 
 ## 📷 ER Diagram
 
-> ![Alt text](ClinicManagementSystem.png) 
+![Clinic Management System ER Diagram](ClinicManagementSystem.png)
+
+---
+
+# 🚗 Comic-Con Parking Management System
+
+## 📌 Overview
+
+This system is designed to manage parking for large-scale events like Comic-Con, where:
+- Thousands of attendees arrive with vehicles
+- Parking slots must be efficiently allocated
+- Entry, exit, and payments must be tracked
+
+---
+
+## 🧩 Key Features
+
+- Real-time parking slot allocation  
+- Vehicle entry and exit tracking  
+- Ticket-based parking system  
+- Payment handling (hourly or fixed)  
+- Support for different vehicle types (car, bike, VIP)  
+
+---
+
+## 🏗️ Entities
+
+- **Vehicle**
+- **Owner / Attendee**
+- **ParkingSlot**
+- **ParkingTicket**
+- **Payment**
+- **ParkingLot / Zone**
+
+---
+
+## 🔗 Relationships
+
+- One attendee → can have multiple vehicles  
+- One vehicle → gets one active parking ticket at a time  
+- One parking slot → assigned to one ticket at a time  
+- One parking ticket → linked to one vehicle and one slot  
+- One ticket → one payment  
+- One parking lot → contains multiple parking slots  
+
+---
+
+## 💡 Special Design Considerations
+
+- Parking slots categorized (VIP, regular, bike)  
+- Ticket stores **entry_time and exit_time**  
+- Payment calculated based on parking duration  
+- Ensures **no double allocation of slots**  
+- Supports scalability for large events  
+
+---
+
+## 📷 ER Diagram
+
+![Comic-Con Parking System ER Diagram](ComicConParking.png)
+
+---
