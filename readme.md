@@ -1,12 +1,11 @@
 # 📊 Database Design Projects
 
-This repository contains ER diagram designs for three real-world systems:
+This repository contains ER diagram designs for four real-world systems:
 
 1. 🛍️ Instagram Thrift Store Management System  
 2. 🏥 Clinic Management System  
 3. 🚗 Comic-Con Parking Management System  
-
-These designs focus on **real-world scalability, normalization, and practical use cases**.
+4. 🛗 Smart Elevator Control System  
 
 ---
 
@@ -188,5 +187,64 @@ This system is designed to manage parking for large-scale events like Comic-Con,
 ## 📷 ER Diagram
 
 ![Comic-Con Parking System ER Diagram](ComicConParking.png)
+
+---
+
+# 🛗 Smart Elevator Control System
+
+## 📌 Overview
+
+This system is designed to manage elevators in smart buildings such as offices, malls, or apartments, where:
+- Multiple elevators serve multiple floors  
+- Users request elevators dynamically  
+- System optimizes movement and reduces wait time  
+
+---
+
+## 🧩 Key Features
+
+- Elevator request handling (up/down calls)  
+- Real-time elevator status tracking  
+- Floor and direction management  
+- Efficient allocation of elevators  
+- Logging trips and movement history  
+
+---
+
+## 🏗️ Entities
+
+- **Building**
+- **Floor**
+- **Elevator**
+- **Request**
+- **Trip / MovementLog**
+- **User (optional)**
+
+---
+
+## 🔗 Relationships
+
+- One building → many floors  
+- One building → many elevators  
+- One floor → can generate many requests  
+- One elevator → handles many requests  
+- One request → assigned to one elevator  
+- One elevator → logs many trips/movements  
+
+---
+
+## 💡 Special Design Considerations
+
+- Requests include **source_floor, destination_floor, direction**  
+- Elevator maintains **current_floor, status (idle/moving), direction**  
+- System must avoid **conflicting assignments**  
+- Trip logs help in **analytics and optimization**  
+- Designed for **real-time scalability**  
+
+---
+
+## 📷 ER Diagram
+
+![Smart Elevator System ER Diagram](SmartElevatorControl.png)
 
 ---
